@@ -6,25 +6,23 @@ import org.springframework.stereotype.Service;
 
 import kr.datasolution.kdigital2023.demo.mapper.HobbiesMapper;
 import kr.datasolution.kdigital2023.demo.model.Hobby;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
-@Slf4j
 public class HobbyMgmtService {
 	private final HobbiesMapper hobbiesMapper;
-	
+
 	HobbyMgmtService(HobbiesMapper hobbiesRepository) {
 		this.hobbiesMapper = hobbiesRepository;
 	}
-	
+
 	public List<Hobby> getHobbies() {
 		return hobbiesMapper.findAll();
 	}
-	
+
 	public Integer addHobby(Hobby hobby) {
 		return hobbiesMapper.save(hobby.getHobby());
 	}
-	
+
 	public Integer deleteHobby(Integer hobbyId) {
 		return hobbiesMapper.remove(hobbyId);
 	}
