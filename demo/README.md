@@ -15,9 +15,9 @@ $ docker run -d --name demo-postgres -p 5432:5432 -e POSTGRES_USER=demouser -e P
 ```
 
 - DB Connection Info
--- username : demouser
--- password : p@ssw0rd
--- Database : demo
+  - username : demouser
+  - password : p@ssw0rd
+  - Database : demo
 
 ### 2. 실행
 
